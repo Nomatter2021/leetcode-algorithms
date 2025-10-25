@@ -71,8 +71,9 @@ Thuật toán này có độ phức tạp O(n^2) như 3Sum nhanh hơn các sử 
 
 **Source code C++:** [3Sum-Closest.cpp](./3Sum-Closest.cpp)
 
-**Source code C++ 3Sum:** [3Sum.cpp](../15. 3Sum/3Sum.cpp)
+**Source code C++ 3Sum:** [3Sum.cpp](../15.%203Sum/3Sum.cpp)
 
-**Giải thích thuật toán 3Sum:** [Giải thích thuật toán 3Sum](../15. 3Sum/3Sum-algorithms.md)
+**Giải thích thuật toán 3Sum:** [Giải thích thuật toán 3Sum](../15.%203Sum/3Sum-algorithms.md)
+
 
 -Chúc các bạn thành công-
