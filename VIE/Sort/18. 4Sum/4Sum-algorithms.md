@@ -55,7 +55,7 @@ Bước 7: Dùng thuật toán 3Sum để tìm các cặp bộ 3 có tổng == t
 Bước 8: Trả kết quả.
 
 ## Kết quả LeetCode
-[Kết quả submissions](./4Sum.jpg)
+![Kết quả submissions](./4Sum.jpg)
 
 ## Thảo luận
 Thuật toán này có độ phức tạp O(n^3) nhanh hơn các sử dụng 4 vòng lặp nhưng vẫn đảm bảo được kết quả cuối cùng.
@@ -68,5 +68,6 @@ Thuật toán này có độ phức tạp O(n^3) nhanh hơn các sử dụng 4 v
 [Thuật toán 3Sum](../15.%203Sum/3Sum-algorithms.md)
 
 [Sourcode 3Sum C++](../15.%203Sum/3Sum.cpp)
+
 
 -Chúc các bạn thành công-
