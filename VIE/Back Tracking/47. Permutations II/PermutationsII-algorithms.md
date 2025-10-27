@@ -50,6 +50,7 @@ Thuật toán này có độ phức tạp O(n*n!) và cho ra chi phí bộ nhớ
 
 [Bài 47. Permutations II](../46.%20Permutations/Permutations-algorithms.md)
 
-[Bài 35. Next Permutation](../../Array/31.%20Next%20Permutation/Next-Permutations-algorithms.md)
+[Bài 31. Next Permutation](../../Array/31.%20Next%20Permutation/Next-Permutations-algorithms.md)
+
 
 -Chúc các bạn thành công-
