@@ -77,10 +77,14 @@ Bước 7: Xét điều kiện i == 0 đây là lúc dãy số đã ở vị tr�
 
 ## Kết quả LeetCode
 
-![Kết quả submissions](./Next-Permuations.jpg)
+![Kết quả submissions](./Next-Permutaions.jpg)
 
 ## Thảo luận
 
 Đây là thuật toán kinh điển có độ phức tạp O(n) bởi chỉ duyệt dãy số 1 lần rồi sau đó swap vị trí là xong
+
+## Tham khảo
+
+[Source code C++](./Next-Permutations.cpp)
 
 -Chúc các bạn thành công-
