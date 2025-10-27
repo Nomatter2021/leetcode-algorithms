@@ -77,7 +77,7 @@ Bước 7: Xét điều kiện i == 0 đây là lúc dãy số đã ở vị tr�
 
 ## Kết quả LeetCode
 
-![Kết quả submissions](./Next-Permutaions.jpg)
+![Kết quả submissions](./Next-Permutations.jpg)
 
 ## Thảo luận
 
@@ -88,3 +88,4 @@ Bước 7: Xét điều kiện i == 0 đây là lúc dãy số đã ở vị tr�
 [Source code C++](./Next-Permutations.cpp)
 
 -Chúc các bạn thành công-
+
