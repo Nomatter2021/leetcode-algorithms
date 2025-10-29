@@ -1,4 +1,4 @@
-# 31. Next Permutation
+# 49. Group Anagrams
 ## Đề bài
 Cho một mảng chuỗi ký tự strs, hãy nhóm lại các từ là hoán vị của nhau.
 
@@ -72,5 +72,6 @@ Với cách làm này ta có độ phức tạp O(n*klog(k)) với n là độ d
 ## Tham khảo
 
 [Source code C++](./Group-Anagrams.cpp)
+
 
 -Chúc các bạn thành công-
