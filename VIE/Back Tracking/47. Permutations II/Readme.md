@@ -48,9 +48,10 @@ Thuật toán này có độ phức tạp O(n*n!) và cho ra chi phí bộ nhớ
 
 [Source Code C++](./Permutations.cpp)
 
-[Bài 47. Permutations](../46.%20Permutations/Permutations-algorithms.md)
+[Bài 47. Permutations](../46.%20Permutations/Readme.md)
 
-[Bài 31. Next Permutation](../../Array/31.%20Next%20Permutation/Next-Permutations-algorithms.md)
+[Bài 31. Next Permutation](../../Array/31.%20Next%20Permutation/Readme.md)
 
 
 -Chúc các bạn thành công-
+
