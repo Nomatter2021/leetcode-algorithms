@@ -74,6 +74,7 @@ Thuật toán này có độ phức tạp O(n*n!) phát sinh đầy đủ tổ h
 
 [Source Code C++](./Permutations.cpp)
 
-[Bài 47. Permutations II](../47.%20Permutations%20II/PermutationsII-algorithms.md)
+[Bài 47. Permutations II](../47.%20Permutations%20II/Readme.md)
+
 
 -Chúc các bạn thành công-
