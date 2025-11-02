@@ -65,9 +65,10 @@ Thuật toán này có độ phức tạp O(n^3) nhanh hơn các sử dụng 4 v
 
 [Source code C++](./4Sum.cpp)
 
-[Thuật toán 3Sum](../15.%203Sum/3Sum-algorithms.md)
+[Thuật toán 3Sum](../15.%203Sum/Readme.md)
 
 [Sourcode 3Sum C++](../15.%203Sum/3Sum.cpp)
 
 
 -Chúc các bạn thành công-
+
