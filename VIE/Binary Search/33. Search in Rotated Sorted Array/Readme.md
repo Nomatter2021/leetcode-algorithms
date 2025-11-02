@@ -61,7 +61,7 @@ Bước 6: Trả kết quả
 
 ## Kết quả leetcode
 
-![Kết quả submissions](./Container-With-Most-Water.jpg)
+![Kết quả submissions](./Search-in-Rotated-Sorted-Array.jpg)
 
 ## Thảo luận
 
@@ -70,5 +70,6 @@ Duyệt nhị phân là cách tối ưu để tìm kiếm trong một mảng đ�
 ## Tham khảo
 
 [Source code C++](./Search-in-Rotated-Sorted-Array.cpp)
+
 
 -Chúc các bạn thành công-
