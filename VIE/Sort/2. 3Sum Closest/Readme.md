@@ -33,19 +33,17 @@ Gọi need = b + c (3)
 
 (2)(3) => need = target - a (4)
 
-Nếu need > target ta phải giảm c và ngược lại, bởi đây là dãy số tăng tuyến tính b luôn < c dựa trên phương trình (4) ta phải giảm c để hạ giá trị của need để need nằm gần target nhất có thể.
+Nếu need > vế bên phải ta phải giảm c và ngược lại, bởi đây là dãy số tăng tuyến tính b luôn < c dựa trên phương trình (4) ta phải giảm c để hạ giá trị của need để need nằm gần target nhất có thể.
 
 Tuy nhiên, bài này lại không thể dừng sớm như bài 3Sum với a > target bởi vì target của bài 3Sum = 0.
 
 Với a > 0 thì mọi số a + b + c đều > 0, nhưng bài này target lại là 1 số bất kỳ. Dựa trên phương trình (3)(4).
 
-b + c = target - a (3)
+need = b + c (3)
 
-need = b + c (4)
+need = target - a (4)
 
-(3)(4) Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn. Lúc này, ta phải điều chỉnh need để need có khoảng cách gần vế bên phải nhất có thể.
-
-(3) Nếu need > vế bên phải thì giảm c và ngược lại.
+(3)(4) Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn. Tuy nhiên, b và c theo tính chất dãy số tuyến tính a < b < c vaf need bị phụ thuộc vào b và c nếu lúc này tiếp tục tăng b ta có thể rút ngắn khoảng cách với vế bên phải. Từ đó tìm ra a, b, c có tổng gần target nhất mà không bị sót nghiệm.
 
 ## Giải thích ý tưởng thuật toán
 
@@ -103,6 +101,7 @@ Thuật toán này có độ phức tạp O(n^2) như 3Sum nhanh hơn các sử 
 
 
 -Chúc các bạn thành công-
+
 
 
 
