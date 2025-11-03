@@ -27,15 +27,13 @@ Giới hạn:
 
 Bài toán cho chúng ta 1 dãy số có độ dài n gồm các giá trị đại diện cho chiều cao và ta phải tìm thể tích lớn nhất có thể xuất hiện.
 
-V = min(a) × b
-
-- V thể tích có được.
-- a là chiều dài (khoảng cách i - j)
-- b là chiều cao (lấy giá trị nhỏ hơn ở Height[i] hoặc Height[j]).
+V = min(Height[i], Height[j]) × (j - i)
 
 Với công thức này thì giá trị và vị trí bị ràng buộc tuyệt đối, bạn phải giữ nguyên cấu trúc mảng. Bởi nếu sort mảng thì gián tiếp làm thay đổi a.
 
-Mà b lại bất định không quy luật, ta chỉ có thể dựa vào a để chọn cách tối ưu, bằng cách đi xuất phát ở vị trí dài nhất sau đó di chuyển dần vào nhau cho đến khi giao nhau, ta sẽ loại bỏ được n cặp [i, j] nhỏ nhất và chỉ lấy những cặp [i, j] cho V cao nhất. Bởi V = min(a) × b nếu b = b/2 thì V cũng = V/2, bắt đầu từ lúc này V chắc chắn không được ghi nhận nên phải loại bỏ để đỡ tốn tài nguyên.
+Mà Height lại bất định không quy luật, ta chỉ có thể dựa vào (j - i) để chọn cách tối ưu, bằng cách đi xuất phát ở vị trí dài nhất sau đó di chuyển dần vào nhau cho đến khi giao nhau, ta sẽ loại bỏ được n cặp [i, j] nhỏ nhất và chỉ lấy những cặp [i, j] cho V cao nhất. Bởi V = min(Height[i], Height[j]) × (j - i) nếu (i - j)/2 sẽ trực tiếp dẫn đến V = V/2, bắt đầu từ lúc này V bắt đầu cho chắc giá trị nằm trong tập nhỏ nhất.
+
+Điểm then chốt trong bài toán đó là min Height, mỗi khi chọn 1 cặp [i, j] ta phải luôn loại bỏ giá trị nhỏ hơn để khi a bị thu hẹp có thể tìm được b > hiện tại tạo thành 1 V có giá trị gần tương đương hoặc trội hơn hiện tại. Vì nếu loại bỏ Hieght cao thì không thể đảm bảo Height sau sẽ cao hơn Height trước vì Height là bất định, dẫn đến V sau có thể nhỏ hơn V trước.
 
 ## Giải thích thuật toán
 
@@ -73,3 +71,4 @@ Bước 7: Trả kết quả.
 
 
 -Chúc các bạn thành công-
+
