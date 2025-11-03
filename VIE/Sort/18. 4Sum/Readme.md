@@ -1,5 +1,4 @@
 # 18. 4Sum
-
 ## Đề bài
 
 Cho trước một day số nums có n số nguyên, hãy trả lại kết quả những bộ tứ độc nhất gồm [nums[a]], [nums[b]], [nums[c]], [nums[d]] với:
@@ -29,6 +28,31 @@ Giới hạn:
 -10^9 <= nums[i] <= 10^9
 
 - 10^9 <= target <= 10^9
+
+## Phân tích dữ liệu
+
+Bài toán 4Sum có thể xem là bài toán biến thể của 3Sum với cấu trúc dữ liệu và điều kiện ràng buộc đầu vào giống nhau, chỉ khác ở chỗ thay vì có 3 biến a, b, c thì ta lại thêm 1 biến d.
+
+Do sự tương đồng về cấu trúc nên ta có thể dùng phương pháp giải của bài 3Sum bằng cách nhóm a và b thành 1 rồi c và d lại di chuyển để dò.
+
+Ta có: a + b + c + d = target (1)
+
+Gọi: k = a + b (2)
+
+(1)(2) => k + c + d = target (3)
+
+Gọi: Need = c + d (4)
+
+(3)(4) => k + need = target => Need = target - k (5).
+
+- Với k bị chi phối bởi a và b
+- Need bị chi phối bởi c và d
+
+Theo bản chất cua dãy số tuyến tinh, khi tăng b thì k tăng dẫn đến chênh lệch với target có thể bị thu hẹp hoặc dãn ra dẫn đến need thay đổi.
+
+Khi need bị thay đổi ta lại điều chỉnh c và d nếu c > need thì với mọi d ta đều cho ra kết quả > need có thể ngắt sớm, nếu c + d > need thì ta giảm d và ngược lại.
+
+Tiếp tục hiệu chỉnh cho đến khi đặt c + d = need và thay vào (3)(4) ta được a + b + c + d = target bộ 4 số cần tìm.
 
 ## Giải thích thuật toán
 
@@ -71,4 +95,5 @@ Thuật toán này có độ phức tạp O(n^3) nhanh hơn các sử dụng 4 v
 
 
 -Chúc các bạn thành công-
+
 
