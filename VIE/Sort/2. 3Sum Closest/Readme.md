@@ -31,27 +31,21 @@ a + b + c = target (1)
 
 Gọi need = b + c (3)
 
-need = target - a (4)
+(2)(3) => need = target - a (4)
 
-Gọi: k = b + c (5)
-
-(4)(5) => a + b + c = target khi và chỉ khi need = k. Bởi vì dãy số chưa hẳn đã có giá trị b + c = need cho nên phải dùng công thức phụ đối chiếu với need và tìm k khoảng cách với need ngắn nhất có thể.
-
-Nếu k > need ta phải giảm c và ngược lại, bởi đây là dãy số tăng tuyến tính b luôn < c dựa trên phương trình (4) ta phải giảm c để hạ giá trị của k để k nằm gần need nhất có thể.
+Nếu need > target ta phải giảm c và ngược lại, bởi đây là dãy số tăng tuyến tính b luôn < c dựa trên phương trình (4) ta phải giảm c để hạ giá trị của need để need nằm gần target nhất có thể.
 
 Tuy nhiên, bài này lại không thể dừng sớm như bài 3Sum với a > target bởi vì target của bài 3Sum = 0.
 
-Với a > 0 thì mọi số a + b + c đều > 0, nhưng bài này target lại là 1 số bất kỳ. Dựa trên phương trình (2)(3)(4)(5).
+Với a > 0 thì mọi số a + b + c đều > 0, nhưng bài này target lại là 1 số bất kỳ. Dựa trên phương trình (3)(4).
 
 b + c = target - a (3)
 
-need = b + c (3)
+need = b + c (4)
 
-k = b + c (5)
+(3)(4) Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn. Lúc này, ta phải điều chỉnh need để need có khoảng cách gần target nhất có thể.
 
-(3) Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn.
-
-(3)(5) Mà need là số tham chiếu cần tìm với đối chiếu là k có cùng công thức nên và với tính chất tuyến tính b luôn < c dẫn đến muốn hạ k phải giảm c để k gần need nhất có thể.
+Nếu need > target thì giảm c và ngược lại.
 
 ## Giải thích ý tưởng thuật toán
 
@@ -109,6 +103,7 @@ Thuật toán này có độ phức tạp O(n^2) như 3Sum nhanh hơn các sử 
 
 
 -Chúc các bạn thành công-
+
 
 
 
