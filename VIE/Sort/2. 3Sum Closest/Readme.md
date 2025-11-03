@@ -25,17 +25,27 @@ Explanation: Tổng khả dĩ có giá trị gần với targer nhất là 0. (0
 
 Bài toán 3Sum Closest có dữ liệu đầu vào và ràng buộc giống như 3Sum dẫn đến ta có thể sắp xếp mảng trở nên tuyến tính rồi dùng công thức.
 
-a + b + c = target => b + c = target - a
+a + b + c = target (1)
 
-Gọi need = b + c = target - a.
-- Với b < c thì với mọi b + c.
-- Nếu b + c > target ta phải giảm c và ngược lại.
+=> b + c = target - a (2)
 
-Tuy nhiên, bài này lại không thể dừng sớm như bài 3Sum với a > target bởi vì target của bài 3Sum = 0. Với a > 0 thì mọi số a + b + c đều > 0, bài này target lại là 1 số bất kỳ. Dựa trên công thức.
+Gọi: need = b + c (3)
 
-b + c = target - a
+(2)(3) => need = target - a (4)
 
-Nếu a > target dẫn đến need bị âm nhưng khi tăng b lên thì vẫn có thể kéo giá trị của need lên gần target nhất có thể và từ đó dẫn đến mất nghiệm nếu ngắt sớm.
+Nếu need > target ta phải giảm c và ngược lại, bởi đây là dãy số tăng tuyến tính b luôn < c dựa trên phương trình (3) ta phải giảm c để hạ giá trị của need để need nằm gần target nhất có thể.
+
+Tuy nhiên, bài này lại không thể dừng sớm như bài 3Sum với a > target bởi vì target của bài 3Sum = 0.
+
+Với a > 0 thì mọi số a + b + c đều > 0, nhưng bài này target lại là 1 số bất kỳ. Dựa trên phương trình (3) và (4).
+
+need = b + c (3)
+
+need = target - a (4)
+
+Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn.
+
+Mà need = b + c với tính chất tuyến tính b luôn < c dẫn đến muốn hạ need phải giảm c để need gần target nhất có thể.
 
 ## Giải thích ý tưởng thuật toán
 
@@ -93,5 +103,6 @@ Thuật toán này có độ phức tạp O(n^2) như 3Sum nhanh hơn các sử 
 
 
 -Chúc các bạn thành công-
+
 
 
