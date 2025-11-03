@@ -56,7 +56,7 @@ và theo biểu thức toán học thì gọi need = target - a.
 
 Từ đó ta được công thức need = b + c => b + c = target - a.
 
-- Nếu a > target thì target - a luôn âm dẫn đến b + c luôn dương đây làm biểu thức vô nghiệm.
+- Nếu a > target thì target - a luôn âm dẫn đến b + c luôn âm đây làm biểu thức vô nghiệm.
 - Nếu b và c đổi giá trị và target cùng a không đổi giá trị thì biểu thức hiện tại vị chi phối bởi b và c ta phải cân bằng giữa b và c.
 
 Need = b + c nếu b tăng thì need tăng ta phải giảm c để cân bằng lại từ đây áp vào tính chất của dãy số tuyến tính số phía sau luôn lớn hơn số phía trước nghĩa là số cuối cùng là lớn nhất và số đầu tiên là bé nhất ta có thể xét đồng thời 2 số này để nếu b + c > need thì nghĩa là tổng quá lớn ta phải giảm giá trị của c ngược lại thì tăng giá trị của b. Tăng giảm cân đối đến khi b + c = need thì đó là bộ ba a, b, c ta đang tìm.
@@ -113,4 +113,5 @@ Thuật toán này có độ phức tạp O(n^2) nhanh hơn các sử dụng 3 v
 
 
 -Chúc các bạn thành công-
+
 
