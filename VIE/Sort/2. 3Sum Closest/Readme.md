@@ -1,4 +1,4 @@
-# 15. 3Sum
+# 16. 3Sum Closest
 ## Đề bài
 Cho trước một dãy số nguyên nums có độ dài n và một số nguyên mục tiêu target, hãy tìm ra 3 số trong dãy số nums có tổng đạt giá trị gần với target nhất.
 
@@ -20,6 +20,22 @@ Explanation: Tổng khả dĩ có giá trị gần với targer nhất là 0. (0
 - 3 <= nums.length <= 3000
 - -1000 <= nums[i] <= 1000
 - -10^4 <= targer <= 10^4
+
+## Phân tích dữ liệu
+
+Bài toán 3Sum Closest có dữ liệu đầu vào và ràng buộc giống như 3Sum dẫn đến ta có thể sắp xếp mảng trở nên tuyến tính rồi dùng công thức.
+
+a + b + c = target => b + c = target - a
+
+Gọi need = b + c = target - a.
+- Với b < c thì với mọi b + c.
+- Nếu b + c > target ta phải giảm c và ngược lại.
+
+Tuy nhiên, bài này lại không thể dừng sớm như bài 3Sum với a > target bởi vì target của bài 3Sum = 0. Với a > 0 thì mọi số a + b + c đều > 0, bài này target lại là 1 số bất kỳ. Dựa trên công thức.
+
+b + c = target - a
+
+Nếu a > target dẫn đến need bị âm nhưng khi tăng b lên thì vẫn có thể kéo giá trị của need lên gần target nhất có thể và từ đó dẫn đến mất nghiệm nếu ngắt sớm.
 
 ## Giải thích ý tưởng thuật toán
 
@@ -77,4 +93,5 @@ Thuật toán này có độ phức tạp O(n^2) như 3Sum nhanh hơn các sử 
 
 
 -Chúc các bạn thành công-
+
 
