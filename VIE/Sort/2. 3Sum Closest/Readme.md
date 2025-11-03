@@ -43,9 +43,9 @@ b + c = target - a (3)
 
 need = b + c (4)
 
-(3)(4) Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn. Lúc này, ta phải điều chỉnh need để need có khoảng cách gần target nhất có thể.
+(3)(4) Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn. Lúc này, ta phải điều chỉnh need để need có khoảng cách gần vế bên phải nhất có thể.
 
-Nếu need > target thì giảm c và ngược lại.
+(3) Nếu need > vế bên phải thì giảm c và ngược lại.
 
 ## Giải thích ý tưởng thuật toán
 
@@ -103,6 +103,7 @@ Thuật toán này có độ phức tạp O(n^2) như 3Sum nhanh hơn các sử 
 
 
 -Chúc các bạn thành công-
+
 
 
 
