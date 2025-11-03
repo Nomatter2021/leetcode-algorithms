@@ -1,9 +1,11 @@
 # 15. 3Sum
+
 ## Đề bài
 Cho trước một dãy số nguyên và bạn hãy trả về toàn bộ các bộ ba theo cấu trúc [nums[i], num[j], num[k] sao cho i != j, i != k và j != k với [nums[i] + num[j] + num[k] = 0.
 Chú ý, kết quả không được chứa những bộ ba lặp lại.
 
 **Ví dụ 1:**
+
 Đầu vào: nums = [-1,0,1,2,-1,-4]
 Đầu ra: [[-1,-1,2],[-1,0,1]]
 Giải thích: 
@@ -14,18 +16,50 @@ Các bộ ba cần tìm là [-1,0,1] và [-1,-1,2].
 Chú ý chỉ lấy những bộ ba có tổng = 0.
 
 **Ví dụ 2:**
+
 Đầu vào: nums = [0,1,1]
+
 Đầu ra: []
+
 Giải thích: Bộ ba khả dĩ có tổng khác 0.
 
 **Ví dụ 3:**
+
 Đầu vào: nums = [0,0,0]
+
 Đầu ra: [[0,0,0]]
+
 Giải thích: Chỉ có một bộ ba số có tổng = 0.
 
+
 **Giới hạn:**
+
 - 3 <= nums.length <= 3000
+
 - -10^5 <= nums[i] <= 10^5
+
+## Phân tích dữ liệu
+
+Đầu vào cho chúng ta một dãy số nguyên tuy nhiên lại không ràng buộc điều kiện là phải cố định giữa vị trí và giá trị trong dãy đây là một yếu tố đặc biệt quan trọng.
+
+Giả sử:
+
+- a = nums[i]
+- b = nums[j]
+- c = nums[k]
+
+Và a + b + c = 0, với việc không ràng buộc vị trí và giá trị dẫn đến cánh cửa ta có thể sort mảng để mảng tăng tuyến tính tạo điều kiện toán học biến bài toán này về dạng toán 2Sum bằng cách cố định a và di chuyển b, c để tìm tổng a + b + c = 0.
+
+Theo tính chất dãy số tuyến tính thì số phía sau luôn lớn hơn số phía trước và do b và c là những số có giá trị lớn hơn a dẫn đến nếu a >= 0 thì không cần phải xét b và c bởi lúc này a + b + c luôn lớn hơn 0.
+
+và theo biểu thức toán học thì gọi need = target - a.
+
+Từ đó ta được công thức need = b + c => b + c = target - a.
+
+- Nếu a > target thì target - a luôn âm dẫn đến b + c luôn dương đây làm biểu thức vô nghiệm.
+- Nếu b và c đổi giá trị và target cùng a không đổi giá trị thì biểu thức hiện tại vị chi phối bởi b và c ta phải cân bằng giữa b và c.
+
+Need = b + c nếu b tăng thì need tăng ta phải giảm c để cân bằng lại từ đây áp vào tính chất của dãy số tuyến tính số phía sau luôn lớn hơn số phía trước nghĩa là số cuối cùng là lớn nhất và số đầu tiên là bé nhất ta có thể xét đồng thời 2 số này để nếu b + c > need thì nghĩa là tổng quá lớn ta phải giảm giá trị của c ngược lại thì tăng giá trị của b. Tăng giảm cân đối đến khi b + c = need thì đó là bộ ba a, b, c ta đang tìm.
 
 ## Giải thích thuật toán
 
@@ -79,3 +113,4 @@ Thuật toán này có độ phức tạp O(n^2) nhanh hơn các sử dụng 3 v
 
 
 -Chúc các bạn thành công-
+
