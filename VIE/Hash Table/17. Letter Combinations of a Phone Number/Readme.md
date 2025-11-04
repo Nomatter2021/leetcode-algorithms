@@ -27,7 +27,7 @@ Cho một chuỗi ký tự số từ 2-9, trả về toàn bộ những tổ h�
 Dữ liệu đầu vào là 1 chuỗi ký tự đó độ dài k và mỗi k ở vị trí i mã hoá cho 1 chuỗi con là s[k[i]], việc phát sinh tổ hợp n độ dài mới s[k[i]] giá trị tương tự như phép nhân ma trận Kronecker với ma trận kết quả s nhân tiếp với s[k[i + n]] tiếp theo.
 
 - Gọi A là ma trận s[k[i]] với độ dài m(i) × n(i) trong đó m(i) là bậc và n(i) là độ dài mỗi bậc.
-- Gọi B là ma trận s[k[i + 1]] với độ dài m(i + 1) × n(i + 1) trong đó m(i + 1) là bậc và m(i + 1) là độ dài mỗi bậc.
+- Gọi B là ma trận s[k[i + 1]] với độ dài m(i + 1) × n(i + 1) trong đó m(i + 1) là bậc và n(i + 1) là độ dài mỗi bậc.
 - Gọi s là ma trận tích Kronecker của A và B.
 
 S = A (x) B
@@ -59,11 +59,15 @@ s = s[k[i]] (×) s[k[i + 1]]
 [a, b, c] (×) [d, e, f]
 
 [ad, ae, af]
+
 [bd, be, bf] (×) [g, h, i]
+
 [cd, ce, cf]
 
 [adg, aeg, afg]|[adh, aeh, afh]|...
+
 [bdg, beg, bfg]|[bdh, beh, bfh]|...
+
 [cdg, ceg, cfg]|[cdh, ceh, cfh]|...
 
 Cho nên chúng ta có thể dùng kỹ thuật đệ quy để giải quyết bài toán. Tuy nhiên, đệ quy lại có nhược điểm cực kỳ chết người đó là chi phí bộ nhớ cao do phải cấp phát cho nhiều hàm liên tục, việc gọi hàm liên tục cũng phát sinh thêm chi phí thời gian mặc dù độ phức tạp như nhau.
@@ -102,6 +106,7 @@ Bài toán này không còn thể tối ưu thêm độ phức tạp, bởi đ�
 
 
 -Chúc các bạn thành công-
+
 
 
 
