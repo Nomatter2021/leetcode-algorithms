@@ -36,6 +36,26 @@ Cho một mảng chuỗi ký tự strs, hãy nhóm lại các từ là hoán v�
 
 - strs[i] là chữ cái tiếng Anh thường.
 
+## Phân tích dữ liệu
+
+Bài toán cho chúng ta 1 vector chứa chuỗi ký tự và tìm các hoán vị của cùng 1 chuỗi và nhóm lại với nhau.
+
+Đây là bài toán dưới góc nhìn phân loại của máy tính, máy tính không thể nhận diện ký tự như con người. Chúng chỉ nhận diện kỷ tự thông qua mã nhị phân 8 bits thông qua ánh xạ của bảng mã ASCII.
+
+Từ việc ánh xạ ký tự về mã thập phân rồi chuyển về chuỗi mã nhị phân, ta có thể tận dụng bước trung gian là mã thập phân để sort chuỗi.
+
+s1 = "aab" = ['a', 'a', 'b'] = [97, 97, 98]
+
+s2 = "baa" = ['b', 'a', 'a'] = [98, 97, 97]
+
+Mảng ánh xạ về thập phân là số và số thì có số lớn và số bé từ đó kỹ thuật sort hoàn toàn thực hiện được. chuỗi sau khi sort sẽ là:
+
+s1 = [97, 97, 98]
+
+s2 = [97, 97, 98]
+
+rồi so sánh bắt cặp nếu giống nhau hoàn toàn từ độ dài đến giá trị mỗi vị trí thì nó là hoán vị của nhau.
+
 ## Giải thích thuật toán
 
 Đây là bài toán HashTable (Bảng băm) với khóa chính là các chữ tái tạo và giá trị là tập hợp các hoán vị của những chữ cái đó (đặc biệt các chữ cái này có thể lặp lại trong).
@@ -75,3 +95,4 @@ Với cách làm này ta có độ phức tạp O(n*klog(k)) với n là độ d
 
 
 -Chúc các bạn thành công-
+
