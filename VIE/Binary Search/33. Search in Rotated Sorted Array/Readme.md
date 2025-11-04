@@ -1,7 +1,6 @@
 # 33. Search in Rotated Sorted Array
 
 ## Đề bài
-
 Mảng nums ban đầu được sắp xếp tăng dần, sau đó có thể bị xoay tại một vị trí nào đó.
 Nhiệm vụ: tìm vị trí của phần tử target trong mảng đã xoay (nếu có), nếu không thì trả về -1.
 Yêu cầu: thuật toán phải chạy trong thời gian O(log n).
@@ -36,6 +35,37 @@ Giới hạn:
 
 - -10^4 <= target <= 10^4
 
+## Phân tích dữ liệu
+
+Bài toán cho ta 1 dãy số tăng tuyến tính có thể xuất hiện điểm k bất kỳ vị trí nào trong dãy từ điểm k trở về cuối dãy sẽ bị đảo chiều giảm tuyến tính, hãy tìm số trong dãy số đó.
+
+Bản chất của bài toán là tìm đường nhanh nhất dẫn đến vị trí của số càn tìm trong dãy số đã cho.
+
+Đây là dãy số tăng tuyến tính và tính chất của dãy số tăng tuyến tính.
+
+Gọi n là độ dài dãy số và i là vị trí nằm trên dãy số:
+
+a(i) <= a(i + 1) <= a(n) (1)
+
+Dựa trên (1) nếu target nằm trong dãy thì ta có:
+
+a(i) <= target <= a(n) (2)
+
+Tuy nhiên, sự xuất hiện của k và dãy đảo ngược sau k dẫn đến sự xuất hiện của điểm gãy mà tại vị trí k toàn bộ phía sau k bị đảo ngược tính chất giảm dần.
+
+a(i) <= a(i + 1) <= a(k) >= a(n) (3)
+
+Nếu target nằm trong k thì dựa trên (3) ta có:
+
+a(k) >= target >= a(n) (4)
+
+(1)(2)(3)(4) => có thể sử dụng phương pháp loại trừ làm con tăng tốc độ phát hiện số trong dãy lên 1/2 lần. Bằng cách chia đôi dãy số với xác xuất phân chia dãy tăng và giảm là 50%.
+
+Nếu a(i) <= a(n/2) ta có được dãy tăng.
+
+Nếu a(i) >= a(n/2) ta có dãy giảm.
+
+(3)(4) => Để xác định target nằm trong dãy nào để loại bỏ dãy số còn lại.
 
 ## Giải thích thuật toán
 
@@ -73,3 +103,4 @@ Duyệt nhị phân là cách tối ưu để tìm kiếm trong một mảng đ�
 
 
 -Chúc các bạn thành công-
+
