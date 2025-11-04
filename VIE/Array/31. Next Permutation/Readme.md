@@ -37,6 +37,45 @@ Hoán vị kế tiếp của một mảng số nguyên là hoán vị lớn hơn
 
 - 0 <= nums[i] <= 100
 
+## Phân tích dữ liệu
+
+Đề bài cho ta 1 dãy số và hãy tìm hoán vị kế tiếp của dãy số đó.
+
+Nếu chúng ta xem dãy số đó là 1 con số thì nums{1, 2, 3} chính là số 123.
+
+Gọi a là số 123 hoán vị kế tiếp dựa trên những số đã có là số kế tiếp > a nhưng có khoảng cách gần a nhất.
+
+ [1, 2, 3] có 6 hoán vị bao gồm:
+
+ - 123
+ - 132
+ - 213
+ - 231
+ - 312
+ - 321
+
+Nếu ta lấy 132 - 123 thì hiệu 2 số là 9 nhỏ hơn hiệu của 213 - 123 là 90, cách nhau 81 đơn vị.
+
+Đây là phương thức phát sinh hoán vị theo thứ tự từ điển, số kế tiếp không được nhỏ hơn số hiện tại. Bởi vì theo dãy từ điển mục phía sau luôn lớn hơn mục phía trước.
+
+Dựa trên cấu trúc số toán học cơ bản ta có:
+
+Đơn vị  < hàng chục < hàng trăm < hàng nghìn
+
+Đây là thứ tự sắp xếp của từ điển. Tuy nhiên, mỗi khi ta thay đối số ở 1 vị trí thì giá trị của số luôn thay đổi tùy thuộc vài vị trí ở hàng nào.
+
+Thế nên luôn phải đẩy số lớn nhất tính từ hàng đơn vị dài lên về sau cùng và đôn số đầu tiên > số đang duyệt tính từ hàng đơn vị lên về trước.
+
+Như thế khi nghịch đảo dãy số phía sau, ta có thể khống chế nó là thứ tự sắp xếp nhỏ nhất của số khi hoán đổi vị trí. Vì số nhỏ bị đẩy lên hàng có giá trị cao dẫn đến làm nhỏ giá trị vốn có, thay thì 900 thì chỉ còn 200.
+
+ví dụ: 127,654
+
+Duyệt từ hàng đơn vị dài lên ta thấy ở hàng chục nghìn và hàng nghìn có 2 < 7 và phía sau tính từ hàng đơn vị có số đầu tiên là 4 > 2 ta hoán đổi và nghịch đảo thứ tự sau hàng nghìn.
+
+- 127,654 -> 147,652 -> 142,567
+
+Để tìm số tiếp theo > 127,654 ta phải thay đổi hàng chục nghìn nhưng chỉ có thể tăng thấp nhất có thể nên ta chọn 4 thay vì 6, 5, 4 hay 7. Và phải đẩy số 2 về cuối để khi nghịch đảo 2 nằm ở hàng dưới chục nghìn là nghin tạo ra số bé nhất có thể là 142,567.
+
 ## Giải thích thuật toán
 
 Thuật toán sinh hoán vị theo thứ tự từ điển là một trong các thuật toán kinh điển nhất.
@@ -88,4 +127,5 @@ Bước 7: Xét điều kiện i == 0 đây là lúc dãy số đã ở vị tr�
 [Source code C++](./Next-Permutations.cpp)
 
 -Chúc các bạn thành công-
+
 
