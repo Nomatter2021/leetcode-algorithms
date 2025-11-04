@@ -1,4 +1,4 @@
-# 31. Longest Substring Without Repeating Characters
+# 17. Letter Combinations of a Phone Number
 ## Đề bài
 Cho một chuỗi ký tự số từ 2-9, trả về toàn bộ những tổ hợp ký tự có thể phát sinh dựa trên nút bấm của bàn phím điện thoại kiểu cũ.
 
@@ -38,15 +38,31 @@ S = A (x) B
 
 Ma trận cuối cùng có độ dài bằng tích độ dài 2 ma trận A và B
 
+rồi tiếp tục sử dụng phép tính tích ma trận Kronecker s (×) s[k[i + n]]
+
 ## Giải thích thuật toán
 
-Đây là bài toán sinh tổ hợp theo tầng với số tầng là độ dài chuỗi digits, hoặc còn gọi là bài toán nhân số hạng.
+Dựa trên phân tích dữ liệu phía trên ta có thể xem bài toán là các phép nhân ma trận Kronecker
 
-với "23"
+với "234"
 
-Tầng 1: [a] [b] [c] (sau đó nhân từng số hạng ở tầng 1 với từng số hạng ở tầng 2 để cho ra kết quả của tầng 2
+s[k[i]]: [a] [b] [c]
 
-Tầng 2: [ad = a*d] [ae = a*e] [af = a*f] rồi tiếp tục với b (nó như bài toán fibonance kết quả ở vòng này là từ vòng trước nhân với vòng hiện tại)
+s[k[i + 1]]: [d, e, f]
+
+s[k[i + 2]]: [g, h, i]
+
+s = s[k[i]] (×) s[k[i + 1]]
+
+[a, b, c] (×) [d, e, f]
+
+[ad, ae, af]
+[bd, be, bf] (×) [g, h, i]
+[cd, ce, cf]
+
+[adg, aeg, afg]|[adh, aeh, afh]|...
+[bdg, beg, bfg]|[bdh, beh, bfh]|...
+[cdg, ceg, cfg]|[cdh, ceh, cfh]|...
 
 Cho nên chúng ta có thể dùng kỹ thuật đệ quy để giải quyết bài toán. Tuy nhiên, đệ quy lại có nhược điểm cực kỳ chết người đó là chi phí bộ nhớ cao do phải cấp phát cho nhiều hàm liên tục, việc gọi hàm liên tục cũng phát sinh thêm chi phí thời gian mặc dù độ phức tạp như nhau.
 
@@ -84,4 +100,5 @@ Bài toán này không còn thể tối ưu thêm độ phức tạp, bởi đ�
 
 
 -Chúc các bạn thành công-
+
 
