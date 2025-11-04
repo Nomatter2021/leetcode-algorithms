@@ -59,7 +59,7 @@ Nếu target nằm trong k thì dựa trên (3) ta có:
 
 a(k) >= target >= a(n) (4)
 
-(1)(2)(3)(4) => có thể sử dụng phương pháp loại trừ làm con tăng tốc độ phát hiện số trong dãy lên 1/2 lần. Bằng cách chia đôi dãy số với xác xuất phân chia dãy tăng và giảm là 50%.
+(1)(2)(3)(4) => có thể sử dụng phương pháp loại trừ làm con tăng tốc độ phát hiện số trong dãy lên 1/2 lần. Bằng cách chia đôi dãy và so sánh biên.
 
 Nếu a(i) <= a(n/2) ta có được dãy tăng.
 
@@ -103,4 +103,5 @@ Duyệt nhị phân là cách tối ưu để tìm kiếm trong một mảng đ�
 
 
 -Chúc các bạn thành công-
+
 
