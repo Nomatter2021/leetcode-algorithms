@@ -26,6 +26,10 @@ Cho trước một dãy số nguyên và bạn hãy trả về toàn bộ các h
 - -10 <= nums[i] <= 10
 - Dãy số không trùng lặp
 
+## Phân tích dữ liệu
+
+Tham khảo nội dung phân tích dữ liệu bài 31. Next permutation, có link ở phần tham khảo.
+
 ## Giải thích thuật toán
 
 Đây là một bài nằm trong chuyên mục đệ quy (BackTracking) nên các giải cũng như tên ta sẽ dùng đệ quy để sinh ra toàn bộ tổ hợp có thể phát sinh.
@@ -78,3 +82,4 @@ Thuật toán này có độ phức tạp O(n*n!) phát sinh đầy đủ tổ h
 
 
 -Chúc các bạn thành công-
+
