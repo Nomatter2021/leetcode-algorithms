@@ -22,6 +22,22 @@ Cho một chuỗi ký tự số từ 2-9, trả về toàn bộ những tổ h�
 
 - digits[i] nằm trong khoảng ['2', '9'].
 
+## Phân tích dữ liệu
+
+Dữ liệu đầu vào là 1 chuỗi ký tự đó độ dài k và mỗi k ở vị trí i mã hoá cho 1 chuỗi con là s[k[i]], việc phát sinh tổ hợp n độ dài mới s[k[i]] giá trị tương tự như phép nhân ma trận Kronecker với ma trận kết quả s nhân tiếp với s[k[i + n]] tiếp theo.
+
+- Gọi A là ma trận s[k[i]] với độ dài m(i) × n(i) trong đó m(i) là bậc và n(i) là độ dài mỗi bậc.
+- Gọi B là ma trận s[k[i + 1]] với độ dài m(i + 1) × n(i + 1) trong đó m(i + 1) là bậc và m(i + 1) là độ dài mỗi bậc.
+- Gọi s là ma trận tích Kronecker của A và B.
+
+S = A (x) B
+
+[A11 × B1, A12 × B1, A13 × B1,...A1n × B1]
+[A12 × B2, A22 × B2, A13 × B2,...A2n × B2]
+[Amn × Bn. . .]
+
+Ma trận cuối cùng có độ dài bằng tích độ dài 2 ma trận A và B
+
 ## Giải thích thuật toán
 
 Đây là bài toán sinh tổ hợp theo tầng với số tầng là độ dài chuỗi digits, hoặc còn gọi là bài toán nhân số hạng.
@@ -68,3 +84,4 @@ Bài toán này không còn thể tối ưu thêm độ phức tạp, bởi đ�
 
 
 -Chúc các bạn thành công-
+
