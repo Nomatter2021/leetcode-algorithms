@@ -33,12 +33,14 @@ Dữ liệu đầu vào là 1 chuỗi ký tự đó độ dài k và mỗi k ở
 S = A (x) B
 
 [A11 × B1, A12 × B1, A13 × B1,...A1n × B1]
-[A12 × B2, A22 × B2, A13 × B2,...A2n × B2]
+[A21 × B2, A22 × B2, A13 × B2,...A2n × B2]
 [Amn × Bn. . .]
 
 Ma trận cuối cùng có độ dài bằng tích độ dài 2 ma trận A và B
 
 rồi tiếp tục sử dụng phép tính tích ma trận Kronecker s (×) s[k[i + n]]
+
+kết quả = (((s(i) (×) s(i+1)) (×) s(i + 2)) (x) s(i + n))
 
 ## Giải thích thuật toán
 
@@ -100,5 +102,6 @@ Bài toán này không còn thể tối ưu thêm độ phức tạp, bởi đ�
 
 
 -Chúc các bạn thành công-
+
 
 
