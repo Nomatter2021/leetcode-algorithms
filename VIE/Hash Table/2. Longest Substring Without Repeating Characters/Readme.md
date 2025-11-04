@@ -30,6 +30,16 @@ Câu trả lời là "abc", có độ dài là 3. Các biến thể khác chỉ 
 
 - s là chữ cái tiếng Anh bao gồm ký tự, số, ký hiệu và khoảng trống.
 
+## Phân tích dữ liệu
+
+Bài toán cho chúng ta 1 chuỗi ký tự và hãy tìm chuỗi ký tự con không có ký tự trung lặp dài nhất trong chuỗi mẹ.
+
+Bài toán này mở ra cho chúng ta không gian máy tính đọc dữ liệu, bản chất máy tính thể nhận diện được ký tự, nó chỉ nhận diện thông qua ánh xạ từ ký tự về mã trung gian qua bảng mã ASCII là thập phân (hoặc hex) để tiếp tục ánh xạ về chuỗi mã 8-bit 0,1.
+
+Bản chất mã thập phân số mà mỗi mã thập phân lại mã hoá cho 1 ký tự nhất có giá trị số thứ tự từ 0 - 255.
+
+Dựa vào nguyên lý này ta có thể tạo 1 bảng ASCII chỉ gồm mã thập phân mà không cần gán ký tự cho nó, để rồi khi máy nhận diện ký tự sẽ đối chiếu mã thập phân với bảng để xác định ký tự này đã xuất hiện hay chưa.
+
 ## Giải thích thuật toán
 
 Đây là bài toán áp dụng kỹ thuật 2 con trỏ để tạo cửa sổ trượt kết hợp với bảng băm để ghi nhớ tín hiệu xuất hiện của các ký tự trong chuỗi.
@@ -60,7 +70,7 @@ Bạn có thể dùng unordered_set để làm bảng băm tuy nhiên hiệu qu�
 
 Để giải quyết vấn đề này ta có thể dùng Vector để làm bảng băm, với cách băm key là chuyển ký tự trong chuỗi thành unsigned char chỉ có giá trị từ 0 -> 255 nhưng vẫn chứa đầy đủ các dạng ký tự tiếng anh.
 
-Còn một cách khác đó là dung mảng số nguyên có độ dài 256 để làm bảng băm. Tuy nhiên, bạn phải dùng 1 vòng lặp for để set-up giá trị ban dầu nên rườm rà hơn.
+Còn một cách khác đó là dùng mảng số nguyên có độ dài 256 để làm bảng băm. Tuy nhiên, bạn phải dùng 1 vòng lặp for để set-up giá trị ban đầu nên rườm rà hơn.
 
 Bước 1: Tạo bảng băm vector HashT
 
@@ -78,7 +88,7 @@ Bước 6: Đối chiếu với HashT để xem ký tự này đã xuất hiện
 
 Bước 7: Nhảy cóc i đến vị trí sau vị trí đã gặp ký tự này lần trước (Bởi vì chuỗi abcab bắt đầu từ a đến khi gặp a lần nữa và nhảy lên vị trí hiện tại thì bạn sẽ mất chuỗi bca và cab)
 
-Bước 8: So sánh độ dài chuỗi cũ với cuỗi mới và lấy cái có độ dài lớn hơn.
+Bước 8: So sánh độ dài chuỗi cũ với chuỗi mới và lấy cái có độ dài lớn hơn.
 
 Bước 9: Ghi nhận lại lần xuất hiện này vào bảng HashT
 
@@ -99,3 +109,4 @@ Tuy nhiên, mỗi dạng dữ liệu có 1 cách xử lý khác nhau không nên
 [Source code C++](./Longest-Substring-Without-Repeating-Characters.cpp)
 
 -Chúc các bạn thành công-
+
