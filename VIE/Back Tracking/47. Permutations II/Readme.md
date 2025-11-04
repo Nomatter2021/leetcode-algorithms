@@ -18,6 +18,10 @@ Cho 1 dãy số nums có thể xuất hiện giá trị lặp, hãy trả về c
 - 1 <= nums.length <= 8
 - -10 <= nums[i] <= 10
 
+## Phân tích dữ liệu
+
+Tham khảo nội dung phân tích dữ liệu bài 31. Next permutation, có link ở phần tham khảo.
+
 ## Giải thích thuật toán
 
 Bài toán này ta có thể sử dụng thuật toán đệ quy sau đó cắt các nhánh xuất hiện trùng lặp, tuy nhiên như bài Permutations mình có nói là đệ quy tốn chi phí bộ nhớ và thời gian quá nhiều.
@@ -54,4 +58,5 @@ Thuật toán này có độ phức tạp O(n*n!) và cho ra chi phí bộ nhớ
 
 
 -Chúc các bạn thành công-
+
 
