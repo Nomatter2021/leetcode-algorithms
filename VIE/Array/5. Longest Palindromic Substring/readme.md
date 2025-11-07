@@ -83,10 +83,14 @@ Bước 12: Trả kết quả
 
 ## Kết quả LeetCode
 
-![Kết quả submissions](./Longest-Palindromic-Substring.jpg)
+![Kết quả submissions](./Longest-Palindromic-Substring.JPG)
 
 ## Thảo luận
 
 Với biện pháp tìm độ dài chuỗi đối xứng qua tâm sau đó dùng độ dài này áp lực để loại bỏ các chuỗi có tâm không có khả năng phát triển độ dài bằng hoặc hơn hiện tại sẽ rút ngắn thời gian chạy vô ích nhưng vẫn không vượt quá O(n²) nếu muốn hạ bậc độ phức tạp cần dùng hướng tiếp cận khác.
+
+## Tham khảo
+
+[Source code C++](./Longest-Palindromic-Substring.cpp)
 
 -Chúc các bạn thành công-
