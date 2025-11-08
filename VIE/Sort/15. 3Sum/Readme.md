@@ -48,7 +48,11 @@ a + b + c = 0 (1)
 
 Gọi need = -a (3)
 
+Với a là cố định cho nên need là hằng số cần tìm.
+
 Gọi T = b + c (4)
+
+với b và c thay đổi để T có thể đạt need.
 
 (3)(4) => T = need khi a + b + c = 0 (5)
 
@@ -116,6 +120,7 @@ Thuật toán này có độ phức tạp O(n^2) nhanh hơn các sử dụng 3 v
 
 
 -Chúc các bạn thành công-
+
 
 
 
