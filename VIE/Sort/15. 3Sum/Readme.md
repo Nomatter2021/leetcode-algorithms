@@ -40,26 +40,29 @@ Giải thích: Chỉ có một bộ ba số có tổng = 0.
 
 ## Phân tích dữ liệu
 
-Đầu vào cho chúng ta một dãy số nguyên tuy nhiên lại không ràng buộc điều kiện là phải cố định giữa vị trí và giá trị trong dãy đây là một yếu tố đặc biệt quan trọng.
+Đề cho yêu cầu tìm tổng ba số trong dãy bằng 0 và không gàn buộc vị trí với giá trị trong dãy vì thế ta có thể sắp xếp dãy tăng tuyến tính với a ≤ b ≤ c.
 
-Giả sử:
+a + b + c = 0 (1)
 
-- a = nums[i]
-- b = nums[j]
-- c = nums[k]
+(1) => b + c = -a (2)
 
-Và a + b + c = 0, với việc không ràng buộc vị trí và giá trị dẫn đến cánh cửa ta có thể sort mảng để mảng tăng tuyến tính tạo điều kiện toán học biến bài toán này về dạng toán 2Sum bằng cách cố định a và di chuyển b, c để tìm tổng a + b + c = 0.
+Gọi need = -a (3)
 
-Theo tính chất dãy số tuyến tính thì số phía sau luôn lớn hơn số phía trước và do b và c là những số có giá trị lớn hơn a dẫn đến nếu a >= 0 thì không cần phải xét b và c bởi lúc này a + b + c luôn lớn hơn 0.
+Gọi T = b + c (4)
 
-và theo biểu thức toán học thì gọi need = target - a.
+(3)(4) => T = need khi a + b + c = 0 (5)
 
-Từ đó ta được công thức need = b + c => b + c = target - a.
+(2) => Khi a > 0 thì -a là âm vì dãy tăng tuyến tính và a ≤ b ≤ c cho nên b và c đều dương do đó b + c > 0 phương trình không có nghiệm.
 
-- Nếu a > target thì target - a luôn âm dẫn đến b + c luôn âm đây làm biểu thức vô nghiệm.
-- Nếu b và c đổi giá trị và target cùng a không đổi giá trị thì biểu thức hiện tại vị chi phối bởi b và c ta phải cân bằng giữa b và c.
+(3) => T bị chi phối bởi b và c và b ≤ c. Nếu tịnh tiến b đến gần c thì tổng phát sinh tăng hạn chế và nếu c < need thì gần như các nghiệm sẽ không thoả mãn.
 
-Need = b + c nếu b tăng thì need tăng ta phải giảm c để cân bằng lại từ đây áp vào tính chất của dãy số tuyến tính số phía sau luôn lớn hơn số phía trước nghĩa là số cuối cùng là lớn nhất và số đầu tiên là bé nhất ta có thể xét đồng thời 2 số này để nếu b + c > need thì nghĩa là tổng quá lớn ta phải giảm giá trị của c ngược lại thì tăng giá trị của b. Tăng giảm cân đối đến khi b + c = need thì đó là bộ ba a, b, c ta đang tìm.
+(5) => b = need - c (6)
+
+(6) => b là phần bù vào khoảng c không đủ để đạt need, do đó ta cần c thật lớn để giảm b về thấp nhất nên dùng c ở cuối dãy và b ở đầu dãy.
+
+Nếu T > need nghĩa là c đang quá lớn dẫn đến thêm b bù quá lố ta cần giảm c để cân bằng.
+
+Nếu T < need nghĩa là b bù không đủ ta tăng b cân bằng.
 
 ## Giải thích thuật toán
 
@@ -113,5 +116,6 @@ Thuật toán này có độ phức tạp O(n^2) nhanh hơn các sử dụng 3 v
 
 
 -Chúc các bạn thành công-
+
 
 
