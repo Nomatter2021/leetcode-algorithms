@@ -33,6 +33,12 @@ Cho một danh sách liên kết, hãy đảo vị trí của mỗi hai node li�
 
 - 0 <= node.val <= 100
 
+## Phân tích dữ liệu
+
+Bài toán cho ta 1 danh sách liên kết và phải swap 2 node liền kề với nhau, ở đây bài toán này không có bấy kỳ công thức toán học nào phức tạp.
+
+Cái cần nhớ chỉ duy nhất là địa chỉ và node mang địa chỉ. Bạn phải thật sự cẩn trọng khi giao địa chỉ của các node cho nhau.
+
 ## Giải thích thuật toán
 
 Bài toán swap node này là bài toán hướng thao tác cấu trúc liên kết của danh sách liên kết nếu không cẩn thận bạn sẽ làm gãy liên kết và không tìm được node kế tiếp và bị fail.
@@ -66,3 +72,4 @@ Bài này cho chúng ta thấy được việc thao tác với cấu trúc khác
 [Source code C++](./Swap-Nodes-in-Pairs.cpp)
 
 -Chúc các bạn thành công-
+
