@@ -36,6 +36,14 @@ Cho 2 danh sách liên kết không rỗng chứa 2 dãy số đảo ngược. M
 
 - Node đầu tiên không được chứa giá trị = 0
 
+## Phân tích dữ liệu
+
+Bài toán cho ta 2 danh sách liên kết và cộng 2 danh sách lại thành 1 danh sách mới.
+
+Đây là bài toán cộng số hạng ta đã được học từ tiểu học, cộng 2 số bắt cặp theo hạng từ hàng đơn vị dài lên. Mỗi khi tổng 2 số lớn hơn 10 sẽ ghi nhận số ở hàng đơn vị rồi nhớ 1 để tham gia tính toán ở hạng tiếp theo.
+
+Lý do bởi mỗi hạng có trọng số là 10 hàng chục lớn hơn gấp 10 lần hàng đơn vị và hàng trăm gấp 10 lần hàng chục, cho nên khi tổng lớn hơn 10 ta phải nâng hạng của số để số đó tham gia tính toán ở hạng có cùng trọng số.
+
 ## Giải thích thuật toán
 
 Đây là phép tính cộng cơ bản chúng ta đã học khi còn tiểu học, cộng từ hàng đơn vị nếu tổng hàng đơn vị > 10 thì lấy giá trị đơn vị và nhờ giá trị hàng chục. Khi cộng tiếp 2 số ở hàng tiếp theo thì cộng thêm cả số nhớ cho đến khi số nhớ = 0 và đi hết toàn bộ số trong hàng.
@@ -79,3 +87,4 @@ Bước 12: Trả kết quả node kết tiếp của node đầu tiên đã kh�
 [Source code C++](./Add-Two-Numbers.cpp)
 
 -Chúc các bạn thành công-
+
