@@ -33,26 +33,35 @@ Giới hạn:
 
 Bài toán 4Sum có thể xem là bài toán biến thể của 3Sum với cấu trúc dữ liệu và điều kiện ràng buộc đầu vào giống nhau, chỉ khác ở chỗ thay vì có 3 biến a, b, c thì ta lại thêm 1 biến d.
 
-Do sự tương đồng về cấu trúc nên ta có thể dùng phương pháp giải của bài 3Sum bằng cách nhóm a và b thành 1 rồi c và d lại di chuyển để dò.
+Do sự tương đồng về cấu trúc nên ta có thể dùng phương pháp giải của bài 3Sum bằng cách nhóm a và b thành 1 rồi c và d lại rồi chuyển thành dạng 3Sum.
 
 Ta có: a + b + c + d = target (1)
 
 Gọi: k = a + b (2)
 
+với a và b là hằng số
+
 (1)(2) => k + c + d = target (3)
 
 Gọi: Need = c + d (4)
 
-(3)(4) => k + need = target => Need = target - k (5).
+(3)(4) => k + Need = target
 
-- Với k bị chi phối bởi a và b
-- Need bị chi phối bởi c và d
+=> Need = target - k (5).
 
-Theo bản chất cua dãy số tuyến tinh, khi tăng b thì k tăng dẫn đến chênh lệch với target có thể bị thu hẹp hoặc dãn ra dẫn đến need thay đổi.
+Gọi T = c + d (6)
 
-Khi need bị thay đổi ta lại điều chỉnh c và d nếu c > need thì với mọi d ta đều cho ra kết quả > need có thể ngắt sớm, nếu c + d > need thì ta giảm d và ngược lại.
+Với c và d là các biến thay đổi được.
 
-Tiếp tục hiệu chỉnh cho đến khi đặt c + d = need và thay vào (3)(4) ta được a + b + c + d = target bộ 4 số cần tìm.
+(4)(5)(6) => a + b + c + d = target khi T = need = c + d (7)
+
+(7) => c = need - d (8)
+
+(8) => c là phần cần bù cho d để đạt need, tương tự như 3Sum ta đặt d ở cuối dãy và c ở đầu dãy để tạo không gian tối ưu ccho c bù phần d còn thiếu.
+
+- Nếu T > need nghĩa là phần bù bị lố nên ta hạ d để tạo thêm không gian.
+- Nếu T < need nghĩa là phần bù không đủ nên ta tăng thêm d.
+- nếu T == need ghi nhận đây là cái cần tìm
 
 ## Giải thích thuật toán
 
@@ -95,5 +104,6 @@ Thuật toán này có độ phức tạp O(n^3) nhanh hơn các sử dụng 4 v
 
 
 -Chúc các bạn thành công-
+
 
 
