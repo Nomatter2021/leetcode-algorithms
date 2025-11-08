@@ -19,7 +19,7 @@ Ví dụ 2:
 
 Đầu vào: nums = nums = [2,2,2,2,2], target = 8
 
-Đầu ra: [[2,2,2,2]
+Đầu ra: [[2,2,2,2]]
 
 Giới hạn:
 
@@ -27,7 +27,7 @@ Giới hạn:
 
 -10^9 <= nums[i] <= 10^9
 
-- 10^9 <= target <= 10^9
+10^9 <= target <= 10^9
 
 ## Phân tích dữ liệu
 
@@ -104,6 +104,7 @@ Thuật toán này có độ phức tạp O(n^3) nhanh hơn các sử dụng 4 v
 
 
 -Chúc các bạn thành công-
+
 
 
 
