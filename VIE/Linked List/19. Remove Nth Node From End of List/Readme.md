@@ -28,15 +28,19 @@ Cho trước node đầu 1 danh sách, hãy loại bỏ node thứ n tính từ 
 
 - 1 <= n <= 30
 
+## Phân tích dữ liệu
+
+Bài toán cho ta 1 danh sách liên kết và bắt chúng ta phải xoá node thứ n tính từ liên kết cuối.
+
+Giả định toàn bộ các liên kết của danh sách tạo thàn 1 đường thẳng d.
+
+- Gọi L là chiều dài của d cho và 2 đầu mút của đoạn thẳng là a nằm ở đầu và b nằm ở đuôi danh sách (1).
+
+- n chia đoạn thẳng ab thành an và nb có L = an + nb, khi n di chuyển gần điểm a và đoạn nb tăng dần và n di chuyển về điểm b thì an tăng dần => an = L - nb (2).
+
+(1)(2) Với bất kỳ điểm n trên đường thẳng d ta có thể tìm điểm n = L - nb với xuất phát điểm từ a.
+
 ## Giải thích thuật toán
-
-Đây là bài toán mô tả mối quan hệ giữa đường thẳng và điểm chia đoạn thẳng thành 2 đoạn thẳng con nằm trên cùng đoạn thẳng.
-
-- Giả định L là chiều dài của danh sách đã cho và 2 đầu mút của đoạn thẳng là a nằm ở đầu và b nằm ở đuôi danh sách.
-
-- n chia đoạn thẳng ab thành an và nb có L = an + nb, khi n di chuyển gần điểm a và đoạn nb tăng dần và n di chuyển về điểm b thì an tăng dần => an = L - nb;
-
-- Áp dụng mối quan hệ nay với bất kỳ điểm n trên dãy ta có thể tìm điểm n bằng cách lấy L - nb.
 
 Cụ thể thuật toán như sau:
 
@@ -69,3 +73,4 @@ Phương pháp này tối ưu hơn cách truyền thống bạn duyệt danh sá
 [Source code C++](./Remove-Nth-Node-From-End-of-List.cpp)
 
 -Chúc các bạn thành công-
+
