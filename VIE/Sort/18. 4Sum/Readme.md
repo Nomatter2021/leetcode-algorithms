@@ -25,9 +25,9 @@ Giới hạn:
 
 - 1 <= nums.length <= 200
 
--10^9 <= nums[i] <= 10^9
+- -10^9 <= nums[i] <= 10^9
 
-10^9 <= target <= 10^9
+- -10^9 <= target <= 10^9
 
 ## Phân tích dữ liệu
 
@@ -60,8 +60,8 @@ Với c và d là các biến thay đổi được.
 (8) => c là phần cần bù cho d để đạt need, tương tự như 3Sum ta đặt d ở cuối dãy và c ở đầu dãy để tạo không gian tối ưu ccho c bù phần d còn thiếu.
 
 - Nếu T > need nghĩa là phần bù bị lố nên ta hạ d để tạo thêm không gian.
-- Nếu T < need nghĩa là phần bù không đủ nên ta tăng thêm d.
-- nếu T == need ghi nhận đây là cái cần tìm
+- Nếu T < need nghĩa là phần bù không đủ nên ta tăng thêm c.
+- Nếu T == need ghi nhận đây là cái cần tìm
 
 ## Giải thích thuật toán
 
@@ -71,7 +71,7 @@ Bước 1: Sắp xếp mảng đã cho theo thứ tự tăng dần.
 
 Bước 2: Tạo các biến vị trí trên mảng gồm n (độ dài mảng), l (đầu mút trái), r (đầu mút phải).
 
-Bước 3: Tạo các biến tính toán need = targer - (nums[i] + nums[j]), T = nums[l] + nums[r], Target (dùng để ép target ban đầu về long long int).
+Bước 3: Tạo các biến tính toán need = target - (nums[i] + nums[j]), T = nums[l] + nums[r], Target (dùng để ép target ban đầu về long long int).
 
 Bước 4: Tạo vector rs dùng để trả kết quả.
 
@@ -104,6 +104,7 @@ Thuật toán này có độ phức tạp O(n^3) nhanh hơn các sử dụng 4 v
 
 
 -Chúc các bạn thành công-
+
 
 
 
