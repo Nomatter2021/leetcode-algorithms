@@ -1,4 +1,5 @@
 # 16. 3Sum Closest
+
 ## Đề bài
 Cho trước một dãy số nguyên nums có độ dài n và một số nguyên mục tiêu target, hãy tìm ra 3 số trong dãy số nums có tổng đạt giá trị gần với target nhất.
 
@@ -33,17 +34,23 @@ Gọi need = b + c (3)
 
 (2)(3) => need = target - a (4)
 
-Nếu need > vế bên phải ta phải giảm c và ngược lại, bởi đây là dãy số tăng tuyến tính b luôn < c dựa trên phương trình (4) ta phải giảm c để hạ giá trị của need để need nằm gần target nhất có thể.
+Gọi T = b + c (5)
+
+(2)(3)(4)(5) => a + b + c = target khi T = need.
+
+(5) b = T - c (6)
+
+(6) => b là khoảng bù thiếu của c để đạt need và ta thực hiện tương tự với bài 3Sum.
 
 Tuy nhiên, bài này lại không thể dừng sớm như bài 3Sum với a > target bởi vì target của bài 3Sum = 0.
 
-Với a > 0 thì mọi số a + b + c đều > 0, nhưng bài này target lại là 1 số bất kỳ. Dựa trên phương trình (3)(4).
-
-need = b + c (3)
+Với a > 0 thì mọi số a + b + c đều > 0, nhưng bài này target lại là 1 số bất kỳ. Dựa trên phương trình (4)(5).
 
 need = target - a (4)
 
-(3)(4) Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn. Tuy nhiên, b và c theo tính chất dãy số tuyến tính a < b < c vaf need bị phụ thuộc vào b và c nếu lúc này tiếp tục tăng b ta có thể rút ngắn khoảng cách với vế bên phải. Từ đó tìm ra a, b, c có tổng gần target nhất mà không bị sót nghiệm.
+T = b + c (5)
+
+(4)(5) => Nếu a > target dẫn đến vế bên phải luôn âm do 1 số nhỏ hơn trừ số lớn hơn. Tuy nhiên, b và c theo tính chất dãy số tuyến tính a < b < c và T bị phụ thuộc vào b và c nếu lúc này tiếp tục tăng b ta có thể rút ngắn khoảng cách với vế bên phải. Từ đó tìm ra a, b, c có tổng gần target nhất mà không bị sót nghiệm.
 
 ## Giải thích ý tưởng thuật toán
 
@@ -101,6 +108,7 @@ Thuật toán này có độ phức tạp O(n^2) như 3Sum nhanh hơn các sử 
 
 
 -Chúc các bạn thành công-
+
 
 
 
