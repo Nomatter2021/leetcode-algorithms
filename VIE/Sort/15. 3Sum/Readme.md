@@ -2,17 +2,25 @@
 
 ## Đề bài
 Cho trước một dãy số nguyên và bạn hãy trả về toàn bộ các bộ ba theo cấu trúc [nums[i], num[j], num[k] sao cho i != j, i != k và j != k với [nums[i] + num[j] + num[k] = 0.
+
 Chú ý, kết quả không được chứa những bộ ba lặp lại.
 
 **Ví dụ 1:**
 
 Đầu vào: nums = [-1,0,1,2,-1,-4]
+
 Đầu ra: [[-1,-1,2],[-1,0,1]]
+
 Giải thích: 
+
 nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+
 nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+
 nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+
 Các bộ ba cần tìm là [-1,0,1] và [-1,-1,2].
+
 Chú ý chỉ lấy những bộ ba có tổng = 0.
 
 **Ví dụ 2:**
@@ -120,6 +128,7 @@ Thuật toán này có độ phức tạp O(n^2) nhanh hơn các sử dụng 3 v
 
 
 -Chúc các bạn thành công-
+
 
 
 
