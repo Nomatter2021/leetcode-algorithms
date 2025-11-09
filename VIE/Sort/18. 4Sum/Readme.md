@@ -71,7 +71,7 @@ Bước 1: Sắp xếp mảng đã cho theo thứ tự tăng dần.
 
 Bước 2: Tạo các biến vị trí trên mảng gồm n (độ dài mảng), l (đầu mút trái), r (đầu mút phải).
 
-Bước 3: Tạo các biến tính toán need = targer - (nums[i] - nums[j]), T = nums[l] + nums[r], Target (dùng để ép target ban đầu về long long int).
+Bước 3: Tạo các biến tính toán need = targer - (nums[i] + nums[j]), T = nums[l] + nums[r], Target (dùng để ép target ban đầu về long long int).
 
 Bước 4: Tạo vector rs dùng để trả kết quả.
 
@@ -79,7 +79,7 @@ Bước 5: Tạo vector sum để chứa bộ 4.
 
 ** Trong vòng lặp for (i) **
 
-Bước 6: Tạo điều kiện loại bỏ trùng lặp với i > 0 và nums[i] == nums[i -1]
+Bước 6: Tạo điều kiện loại bỏ trùng lặp với i > 0 và nums[i] == nums[i - 1]
 
 ** Trong vòng lặp for (j) **
 
@@ -104,6 +104,7 @@ Thuật toán này có độ phức tạp O(n^3) nhanh hơn các sử dụng 4 v
 
 
 -Chúc các bạn thành công-
+
 
 
 
